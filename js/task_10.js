@@ -85,9 +85,15 @@ const users = [
   },
 ];
 // Write code under this line
-const getSortedUniqueSkills = array => array;
-
-// console.log(getSortedUniqueSkills(users));
+const getSortedUniqueSkills = array =>
+  array
+    .reduce((acc, { skills }) => acc + skills, '')
+    // .slice()
+    // .concat()
+    // .sort();
+    .filter(({ skills }) => skills != { skills });
+// .sort();
+console.log(getSortedUniqueSkills(users));
 /* [ 'adipisicing', 'amet',
  'anim', 'commodo',
  'culpa', 'elit',
